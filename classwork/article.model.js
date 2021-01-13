@@ -7,4 +7,5 @@ const ArticleSchema = new mongoose.Schema({
  content: String
 })
 var Article = mongoose.model('Article', ArticleSchema)
+
 module.exports = Article

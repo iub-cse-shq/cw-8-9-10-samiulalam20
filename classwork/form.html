@@ -12,10 +12,10 @@
 
         <script>
         $('#save').click(function(){
-            let title = $('#title').val()
-            let content = $('#content').val()
-            let article = {title: title, content: content}
-            console.log('Article', article)
+            //let title = $('#title').val()
+            //let content = $('#content').val()
+            let article = {title: $('title').val(), content: $('content').val()}
+            console.log(article)
             $.ajax({
                 type: 'POST',
                 url: '/article/new',

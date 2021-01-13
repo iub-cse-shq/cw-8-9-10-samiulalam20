@@ -33,9 +33,10 @@ app.get('/second', function(request, response){
 app.get('/article/form', function(request, response){
     response.sendFile(__dirname+'/form.html')
 })
-let articles = [{title: "test1", content: "test1"},
+var articles = [{title: "test1", content: "test1"},
                 {title: "test2", content: "test2"},
                 {title: "test3", content: "test3"}]
+                
 app.post('/article/new', function (request, response){
 var newArticle = new Article(request.body)
 newArticle.save(function (err, data) {
